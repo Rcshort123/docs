@@ -1,22 +1,49 @@
-# .length()
 
-.length() is used on objects such as strings and arrays to return the length of the object.
-The .length() function does vary when used on string vs arrays. 
+---
+Title: 'storage.length' property
 
-## Syntax
-length is called on a string through the following syntax and will output the number of characters of the string. 
-```
-const pet = dog;
-console.log(pet.length);
-///returns 3;
-```
-## Syntax 
+Description: 'Returns a number representing the amount of data items stored in the Storage object.'
 
-length is called on an array through the following syntax.
+Subjects:
+  - 'Web development'
+  - 'API'
+  - 'JSON'
+
+Tags:
+  - 'Algorithms'
+  - 'Arithmetic'
+
+CatalogContent:
+  - 'learn-javascript'
+  - 'paths/web development'
+---
+
+storage.length is a instance property of the object which it is called on. It will return the number of data items
+(key/valve pairs) stored in a storage object and represent it as an integer. 
+
+### Syntax
+---
+```
+window.sessionStorage.length;
+```
+or 
+```
+window.localStorage.length;
+```
+
+As seen above the .length property can be used on either a localStorage object or a sessionStorage object.
+
+### Example 
+```
+const createSessionObj = {
+  "mytime", Date.now(),
+  "myname", "David",
+  "myage", 23
+}; 
+
+console.log(createSessionObj.length);
+/// return 3
 
 ```
-const array = [1, 2, 3, 4];
-console.log(array.length);
-/// returns 4
-```
-Remember arrays are 0 Indexed but .length will count the 0 as 1 in it's count. 
+Here we have an object from the current session with it's stored key/value pairs. To find out how many the object is holding we can call .length on the object for the return value of 3. 
+
